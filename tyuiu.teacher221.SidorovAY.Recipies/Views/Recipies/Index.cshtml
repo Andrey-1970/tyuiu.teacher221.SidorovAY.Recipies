@@ -1,0 +1,18 @@
+﻿@model IEnumerable<tyuiu.teacher221.SidorovAY.Recipies.Data.Recipe>
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<ul>
+    @foreach (var recipe in Model)
+    {
+        <li>
+            <h1>@recipe.Name</h1>
+            @foreach(var ing in recipe.Ingridients)
+            {
+                <h2>@ing.Name</h2>
+            }
+        </li>
+    }
+</ul>
